@@ -1,0 +1,29 @@
+.logo-image {
+    width: 300px;
+    height: 150px;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.login {
+    display: flex;
+    align-items: center;
+}
+  
+.login button {
+    -left: 10px; 
+}
+
+
+.login-button {
+    background-color: #3d56f0;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
