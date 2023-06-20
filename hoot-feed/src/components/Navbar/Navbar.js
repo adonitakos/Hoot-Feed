@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import Logo from "../../Images/Logo_No_Slogan.png"
-import "../../Styling/Navbar.css"
+import "../Navbar/Navbar.css"
 import { Auth } from 'aws-amplify';
-
 
 function Navbar() {
   const [isLoginOpen, setLoginOpen] = useState(false);
@@ -16,6 +15,7 @@ function Navbar() {
   const handleLogin = async () => {
     try {
       await Auth.signIn(username, password);
+      console.log("Successful Login");
       // Handle successful login
     } catch (error) {
       console.log('Login error:', error);
