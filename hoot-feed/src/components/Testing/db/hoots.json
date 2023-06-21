@@ -1,0 +1,44 @@
+{
+    "hoots": [
+        {
+            "hootID":"569937434",
+            "user": "adonitakos",
+            "message": "The stock market is showing significant gains today, reaching new all-time highs. Bullish trends ahead!"
+        },
+        {
+            "hootID":"265517831",
+            "user": "aayana_evanson",
+            "message": "I can't wait for Drake to drop his new album!"
+        },
+        {
+            "hootID":"906030128",
+            "user": "matt_panchyk",
+            "message": "The Knicks are totally going to lose this season"
+        },
+        {
+            "hootID":"718975678",
+            "user": "test-man",
+            "message": "I just ate some lasagna for breakfast!"
+        },
+        {
+            "hootID": "965383883",
+            "user": "tech-dude",
+            "message": "Intel's new 14th Gen processors are set to launch a couple of months from now! I can't wait!"
+        },
+        {
+            "hootID": "925721576",
+            "user": "fat-ass",
+            "message": "The new steakhouse down the road is serving elephant steaks!"
+        },
+        {
+            "hootID": "853690874",
+            "user": "science-guy",
+            "message": "Biologists have discovered that certain reptiles can grow a third leg"
+        },
+        {
+            "hootID": "239997924",
+            "user": "irrelevant-person",
+            "message": "I had a dream the Statue of Liberty came to life!"
+        }
+    ]
+}

@@ -9,6 +9,6 @@ function TestPage() {
     <API_Testing />
   </>
   ) 
-}
+} // <--- TestPage() function ends here
 
 export default TestPage;

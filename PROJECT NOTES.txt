@@ -6,8 +6,8 @@ Stack
 - Langauge: JavaScript
 - Frameworks/Libraries: React.js
 - API(s): HuggingFace --> facebook/bart-large-mnli
-- Authentication: AWS Cognito OR Firebase Auth?
-- Database: AWS DynamoDB OR Firestore?
+- Authentication: AWS Amplify
+- Database: AWS DynamoDB
 
 Pages
 - Landing
@@ -17,6 +17,7 @@ Pages
 - Account Settings???
 
 User
+- userID: (ex: 123456789)
 - Handle (ex: adonitakos)
 - Display Name (ex: Adoni Takos)
 - DOB?
