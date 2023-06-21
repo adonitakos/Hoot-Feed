@@ -16,7 +16,7 @@ function Navbar() {
     try {
       await Auth.signIn(username, password);
       console.log("Successful Login");
-      // Handle successful login
+      window.location.href = '/dashboard'
     } catch (error) {
       console.log('Login error:', error);
       // Handle login error
