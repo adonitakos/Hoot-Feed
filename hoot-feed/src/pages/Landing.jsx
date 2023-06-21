@@ -1,11 +1,11 @@
 // File: /src/pages/Landing.jsx
 import React from 'react';
-import Navbar from '../components/Testing/Navbar';
+import Navbar from '../components/Navbar/Navbar';
 
 function Landing() {
   return (
     <>
-      <Navbar></Navbar>
+      <Navbar />
       <h1>Landing page</h1>
     </>
   )

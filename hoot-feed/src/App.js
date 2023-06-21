@@ -6,6 +6,7 @@ import './App.css';
 import Landing from './pages/Landing';
 import Dashboard from './pages/Dashboard';
 import TestPage from './pages/TestPage';
+import InterestsPage from './components/InterestsForm';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route exact path='/' element={<Landing/>} />
         <Route exact path='/dashboard' element={<Dashboard/>} />
         <Route exact path='/testpage' element={<TestPage/>} />
+        <Route exact path='/interests' element={<InterestsPage/>} />
       </Routes>
     </Router>
   );

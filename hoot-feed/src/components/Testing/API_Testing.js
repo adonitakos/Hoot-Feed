@@ -1,6 +1,5 @@
 // File: /src/Testing/API_Testing.js
 // THIS IS ONLY FOR TESTING!!!!!!
-
 import React, { useState, useEffect } from 'react';
 import { HUGGING_FACE_API_KEY } from '../../config';
 
@@ -27,21 +26,21 @@ function API_Testing() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const testData = require('./test_data.json'); // read JSON file
-        const feed = testData.feed; // store testData.feed object in local hoots array
-        const scoredHoots = []; // initialize array for feed that will be scored from each query result
+        const hootsData = require('./db/hoots.json'); // read JSON file
+        const hoots = hootsData.hoots; // store hootstData.hoots object in local hoots array
+        const scoredHoots = []; // initialize array for hoots that will be scored from each query result
 
-        for (let i = 0; i < feed.length; i++) { // loop through whole feed
-          const hoot = feed[i]; // just shorthanding, really anything that says hoot can just be hoots[i]
+        for (let i = 0; i < hoots.length; i++) { // loop through whole hoots
+          const hoot = hoots[i]; // just shorthanding, really anything that says hoot can just be hoots[i]
           const response = await query({
-            "inputs": hoot.hoot,
+            "inputs": hoot.message,
             "parameters": {
-              "candidate_labels": ["Music", "Economics", "Sports"]
+              "candidate_labels": ["Music", "Business & Economics", "Sports", "Food", "Technology & Computing", "Science"]
             }
           });
           scoredHoots.push({
             user: hoot.user,
-            hoot: hoot.hoot,
+            hoot: hoot.message,
             scores: response
           });
         } // <--- for() loop ends here
@@ -63,7 +62,7 @@ function API_Testing() {
             {responseData.map((scoredHoot, index) => (
               <li key={index}>
                 <h3>User: {scoredHoot.user}</h3>
-                <p>Hoot: {scoredHoot.hoot}</p>
+                <p>Message: {scoredHoot.hoot}</p>
                 <pre>{JSON.stringify(scoredHoot.scores, null, 2)}</pre>
               </li>
             ))}

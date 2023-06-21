@@ -1,7 +1,10 @@
+/* File: /src/components/Navbar/Navbar.css */
+
 .logo-image {
     width: 300px;
     height: 150px;
 }
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -16,7 +19,6 @@
 .login button {
     -left: 10px; 
 }
-
 
 .login-button {
     background-color: #3d56f0;

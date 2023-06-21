@@ -1,6 +1,7 @@
+// File: /src/components/Navbar/Navbar.js
 import React, { useState } from 'react';
-import Logo from "../../Images/Logo_No_Slogan.png"
-import "../../Styling/Navbar.css"
+import Logo from "../../Images/Logo_No_Slogan.png";
+import "./Navbar.css";
 
 function Navbar() {
   const [isLoginOpen, setLoginOpen] = useState(false);
@@ -25,6 +26,6 @@ function Navbar() {
       </div>
     </div>
   );
-}
+} // <--- Navbar() function ends here
 
 export default Navbar;
