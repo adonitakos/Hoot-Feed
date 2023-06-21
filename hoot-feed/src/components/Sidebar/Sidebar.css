@@ -48,11 +48,40 @@ h3 {
 }
 
 .logout-button {
-  margin-top: 5rem;
+  margin-top: auto;
   margin-bottom: 10px;
 }
 
 .logout-button:hover,
 .hoot-button:hover {
   background-color: #3448d8;
+}
+
+.blue-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #d4e1f7;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.hoot-form-container {
+  width: 100%;
+  max-width: 400px;
+}
+
+.hoot-button {
+  margin-top: 20px;
+}
+.hoot-form-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 20px;
 }
