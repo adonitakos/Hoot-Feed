@@ -1,0 +1,58 @@
+.sidebar {
+  width: 200px;
+  height: 100vh;
+  background-color: #f5f5f5;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.profile {
+  text-align: center;
+}
+
+.profile-picture {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+h3 {
+  margin: 0;
+}
+
+.sidebar-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.sidebar-links li {
+  margin-bottom: 10px;
+}
+
+.logout-button,
+.hoot-button {
+  background-color: #3d56f0;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.logout-button {
+  margin-top: 5rem;
+  margin-bottom: 10px;
+}
+
+.logout-button:hover,
+.hoot-button:hover {
+  background-color: #3448d8;
+}
