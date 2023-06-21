@@ -3,10 +3,10 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 // Pages:
-import Landing from './pages/Landing';
+import Landing from './pages/Landing/Landing';
 import Dashboard from './pages/Dashboard';
 import TestPage from './pages/TestPage';
-import InterestsPage from './components/InterestsForm';
+import MainFeed from './pages/MainFeed';
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
         <Route exact path='/' element={<Landing/>} />
         <Route exact path='/dashboard' element={<Dashboard/>} />
         <Route exact path='/testpage' element={<TestPage/>} />
-        <Route exact path='/interests' element={<InterestsPage/>} />
+        <Route exact path='/mainfeed' element={<MainFeed/>} />
       </Routes>
     </Router>
   );
