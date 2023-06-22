@@ -1,0 +1,12 @@
+{
+    "users": [
+        {
+            "userID": "123456789",
+            "email": "manperson@fakeemail.com",
+            "display_name": "Man Person",
+            "hoots": [
+                "569937434", "239997924"
+            ]
+        }
+    ]
+}

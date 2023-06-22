@@ -2,6 +2,8 @@
 // THIS IS ONLY FOR TESTING!!!!!!
 import React, { useState, useEffect } from 'react';
 import { HUGGING_FACE_API_KEY } from '../../config';
+import hootsData from './db/hoots.json'
+import interests from './db/interests.json';
 
 // Use fetch POST request asyncronously to gain access to bart-large-mnli model
 // and query a given data parameter(this being an input like a hoot)
@@ -26,16 +28,18 @@ function API_Testing() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const hootsData = require('./db/hoots.json'); // read JSON file
         const hoots = hootsData.hoots; // store hootstData.hoots object in local hoots array
         const scoredHoots = []; // initialize array for hoots that will be scored from each query result
 
-        for (let i = 0; i < hoots.length; i++) { // loop through whole hoots
-          const hoot = hoots[i]; // just shorthanding, really anything that says hoot can just be hoots[i]
+        // Fetch candidate labels JSON file
+        const candidateLabels = interests;
+
+        for (let i = 0; i < hoots.length; i++) {
+          const hoot = hoots[i];
           const response = await query({
             "inputs": hoot.message,
             "parameters": {
-              "candidate_labels": ["Music", "Business & Economics", "Sports", "Food", "Technology & Computing", "Science"]
+              "candidate_labels": candidateLabels
             }
           });
           scoredHoots.push({
@@ -54,7 +58,7 @@ function API_Testing() {
 
     return (
       <>
-      <h1>TEST PAGE</h1>
+      <h1>API TESTING</h1>
       {responseData && (
         <div>
           <h2>Scored Hoots:</h2>

@@ -22,9 +22,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# ADDED
+# ==== ADDED BY DEVELOPERS ====
 config.js
-PROJECT NOTES.txt
+PROJECT-NOTES.txt
 aws-exports.js
 
 #amplify-do-not-edit-begin

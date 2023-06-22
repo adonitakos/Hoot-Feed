@@ -2,42 +2,50 @@
     "hoots": [
         {
             "hootID":"569937434",
-            "user": "adonitakos",
-            "message": "The stock market is showing significant gains today, reaching new all-time highs. Bullish trends ahead!"
+            "user": "Adoni Takos",
+            "user_image": "https://sjuhellenic.com/static/media/Adoni.794a80d14941c80408f8.jpeg",
+            "message": "My name is Antonios Francesco “Adoni” Takos, and this is a test of our version of a Tweet, we call a “Hoot”; on our Twitter clone platform, Hoot Feed. This is built with React.js, along with an AWS backend that is handled with AWS Cognito for authentication and AWS DynamoDB for our NoSQL database. ",
+            "date": "Jun 21, 2023",
+            "time": "4:30 PM",
+            "image": "https://sjuhellenic.com/static/media/Yiannaki_Awards_2023.b2f4cea817b77b95fc45.jpg"
         },
         {
             "hootID":"265517831",
-            "user": "aayana_evanson",
-            "message": "I can't wait for Drake to drop his new album!"
+            "user": "Aayana Evanson",
+            "user_image": "https://media.licdn.com/dms/image/D4E03AQEaa6tLU3efrQ/profile-displayphoto-shrink_800_800/0/1665723537839?e=1692835200&v=beta&t=8Khy5JgFqzi7P_twzYX_S40XNbO19KURk3CLQfKKAaw",
+            "message": "I can't wait for Drake to drop his new album!",
+            "date": "Jun 21, 2023",
+            "time": "5:30 PM"
         },
         {
             "hootID":"906030128",
-            "user": "matt_panchyk",
+            "user": "Matt Panchyk",
+            "user_image":"https://media.licdn.com/dms/image/C5603AQEOIuOkXRg1fw/profile-displayphoto-shrink_800_800/0/1611791297608?e=1692835200&v=beta&t=nwqoWGqDLHQVgZX5q_ewcSjUYy3ITSvsvlBAozG7Lbc",
             "message": "The Knicks are totally going to lose this season"
         },
         {
             "hootID":"718975678",
-            "user": "test-man",
+            "user": "Test Man",
             "message": "I just ate some lasagna for breakfast!"
         },
         {
             "hootID": "965383883",
-            "user": "tech-dude",
+            "user": "Tech Dude",
             "message": "Intel's new 14th Gen processors are set to launch a couple of months from now! I can't wait!"
         },
         {
             "hootID": "925721576",
-            "user": "fat-ass",
+            "user": "Fat Ass",
             "message": "The new steakhouse down the road is serving elephant steaks!"
         },
         {
             "hootID": "853690874",
-            "user": "science-guy",
+            "user": "Science Guy",
             "message": "Biologists have discovered that certain reptiles can grow a third leg"
         },
         {
             "hootID": "239997924",
-            "user": "irrelevant-person",
+            "user": "Man Person",
             "message": "I had a dream the Statue of Liberty came to life!"
         }
     ]

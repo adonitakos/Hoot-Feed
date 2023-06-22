@@ -1,0 +1,41 @@
+Name: Hoot-Feed
+GitHub repo: https://github.com/adonitakos/Hoot-Feed
+Project Info: https://app.theheadstarter.com/dashboard/assignment/project/02b14b1a-d333-489e-a696-199cc4312190/part-1/
+
+--- Stack ---
+- Langauge: JavaScript
+- Frameworks/Libraries: React.js
+- API(s): HuggingFace --> facebook/bart-large-mnli [https://huggingface.co/facebook/bart-large-mnli]
+- Authentication: AWS Cognito [https://us-east-1.console.aws.amazon.com/cognito/v2/idp/user-pools/us-east-1_hOg2Q6vMt/users?region=us-east-1]
+- Database: AWS DynamoDB [https://us-east-1.console.aws.amazon.com/dynamodbv2/home?region=us-east-1#tables]
+
+--- Pages ---
+- Landing
+- Login
+- Sign Up
+- Dashboard
+- Account Settings???
+
+--- Data ---
+Users
+- user_id: (ex: b2c5af1e-6e07-463a-9df2-661cd6eb000f)
+- email: (ex: adonitakos119@gmail.com)
+- preferred_name: (ex: Adoni Takos)
+- hoots: [ids]
+
+Hoots (Tweets)
+- hoot_id: (ex: 123456789)
+- user_id : (ex: 123456789)
+- message: (ex: "The Knicks are going to lose this season:")
+
+Interests
+- Sports
+- Music
+- Finance OR Economics (whichever works best for ml model)
+- Technology
+- Fashion
+- Food
+- Entertainment
+
+--- Miscellaneous ---
+- Color Scheme: Headstarter purple

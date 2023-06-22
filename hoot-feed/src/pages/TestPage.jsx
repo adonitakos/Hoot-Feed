@@ -2,11 +2,15 @@
 // PURELY FOR TESTING!!!!!! (in conjunction with Testing components)
 import React from 'react';
 import API_Testing from '../components/Testing/API_Testing';
+import HootsFeed from '../components/Testing/HootsFeed';
+
 
 function TestPage() {
   return (
   <>
-    <API_Testing />
+   <HootsFeed />
+   <br /> <br /> <br />
+   <API_Testing />
   </>
   ) 
 } // <--- TestPage() function ends here
