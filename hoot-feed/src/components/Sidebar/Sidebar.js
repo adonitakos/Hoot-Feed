@@ -1,9 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { Auth } from 'aws-amplify';
-import "./Sidebar.css"
+import './Sidebar.css';
+import HootForm from '../HootForm/HootForm';
 
 function Sidebar() {
   const [user, setUser] = useState(null);
+  const [showHootForm, setShowHootForm] = useState(false);
+
+  const toggleHootForm = () => {
+    setShowHootForm(!showHootForm);
+  };
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -22,8 +28,8 @@ function Sidebar() {
   const handleLogout = async () => {
     try {
       await Auth.signOut();
-      console.log("Successful Logout");
-      // Handle successful logout or navigate to the login page
+      console.log('Successful Logout');
+      window.location.href = '/';
     } catch (error) {
       console.log('Logout error:', error);
       // Handle logout error
@@ -49,10 +55,27 @@ function Sidebar() {
           <a href="/explore">Explore</a>
         </li>
       </ul>
+      <button
+        className={`hoot-button ${showHootForm ? 'active' : ''}`}
+        onClick={toggleHootForm}
+      >
+        Hoot
+      </button>
+      <div className="blue-div">
       
-      <button className="hoot-button">Hoot</button>
-      <div></div>
-      <button onClick={handleLogout} className="logout-button">Logout</button>
+      {showHootForm && (
+      <div className="hoot-form-container">
+        <HootForm />
+      </div>
+    )}
+    </div>
+      
+
+    
+
+      <button onClick={handleLogout} className="logout-button">
+        Logout
+      </button>
     </div>
   );
 }

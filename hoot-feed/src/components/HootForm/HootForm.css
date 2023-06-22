@@ -1,0 +1,62 @@
+.hoot-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .hoot-form .form-container {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .hoot-form .form-box {
+    background-color: #d4e1f7;
+    padding: 10px;
+    border-radius: 8px;
+    width: 100%;
+  }
+  
+  .hoot-form textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 1px 1px 1px 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    resize: none;
+  }
+  
+  .hoot-form .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .hoot-form .form-container label {
+    display: flex;
+    align-items: center;
+    background-color: #3d56f0;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .hoot-form .form-container label img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+  }
+  
+  .hoot-form .form-box .selected-image {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+    padding-bottom: 15px;
+  }
+  
