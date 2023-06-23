@@ -1,15 +1,41 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './HootForm.css';
-import imageIcon from '../../Images/Image.png'; // Replace with your desired image icon
+import imageIcon from '../../Images/Image.png';
+import { API, graphqlOperation, Auth } from 'aws-amplify';
+import { createHoot } from '../../graphql/mutations';
 
 function HootForm() {
   const [message, setMessage] = useState('');
   const [picture, setPicture] = useState(null);
+  const [preferredUsername, setPreferredUsername] = useState('');
 
-  const handleFormSubmit = (e) => {
+  useEffect(() => {
+    // Retrieve the current authenticated user
+    const fetchUser = async () => {
+      try {
+        const user = await Auth.currentAuthenticatedUser();
+        setPreferredUsername(user.attributes.preferred_username);
+      } catch (error) {
+        console.error('Error fetching user', error);
+      }
+    };
+
+    fetchUser();
+  }, []);
+
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
-    // Handle the form submission here
-    // Send to Dynamo DB
+
+    const hoot = { message, picture, preferredUsername };
+
+    try {
+      await API.graphql(graphqlOperation(createHoot, { input: hoot }));
+      setMessage('');
+      setPicture(null);
+      console.log('Hoot Sent');
+    } catch (error) {
+      console.error('Error adding hoot', JSON.stringify(error));
+    }
   };
 
   const handlePictureInputChange = (e) => {
@@ -19,7 +45,7 @@ function HootForm() {
 
   const handleTextAreaChange = (e) => {
     const value = e.target.value;
-    if (value.length <= 300) { {/*Character limit */}
+    if (value.length <= 300) {
       setMessage(value);
     }
   };
@@ -49,6 +75,15 @@ function HootForm() {
             />
             <img src={imageIcon} alt="Select Image" className="image-icon" />
           </label>
+          <div className="username-input">
+            <label htmlFor="username">Username: </label>
+            <input
+              type="text"
+              id="username"
+              value={preferredUsername}
+              disabled
+            />
+          </div>
           <div className="button-container">
             <button type="submit">Hoot</button>
           </div>

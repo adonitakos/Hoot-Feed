@@ -8,6 +8,8 @@ import Dashboard from './pages/Dashboard';
 import TestPage from './pages/TestPage';
 import MainFeed from './pages/MainFeed';
 import PrivateRoute from './components/Misc/PrivateRoute';
+import Profile from './pages/Profile';
+import DB_Testing from './components/Testing/DB_Testing';
 
 function App() {
   return (
@@ -17,6 +19,9 @@ function App() {
         <Route exact path='/dashboard' element={<Dashboard/>} />
         <Route exact path='/testpage' element={<TestPage/>} />
         <Route exact path='/mainfeed' element={<MainFeed/>} />
+        <Route exact path='/profile' element={<Profile/>}/>        
+        <Route exact path='/test' element={<DB_Testing/>}/> {/*delete */}
+
       </Routes>
     </Router>
   );
