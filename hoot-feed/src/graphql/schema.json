@@ -1,0 +1,27 @@
+{
+  "name": "Hoot",
+  "description": "A Hoot...",
+  "fields": [
+    {
+      "name": "id",
+      "type": "ID",
+      "isNonNull": true
+    },
+    {
+      "name": "message",
+      "type": "String",
+      "isNonNull": true
+    },
+    {
+      "name": "picture",
+      "type": "String",
+      "isNonNull": false
+    },
+    {
+      "name": "preferredUsername",
+      "type": "String",
+      "isNonNull": false
+    }
+  ]
+  
+}
