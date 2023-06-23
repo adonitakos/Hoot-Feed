@@ -7,6 +7,7 @@ import Landing from './pages/Landing/Landing';
 import Dashboard from './pages/Dashboard';
 import TestPage from './pages/TestPage';
 import MainFeed from './pages/MainFeed';
+import Profile from './pages/Profile';
 import PrivateRoute from './components/Misc/PrivateRoute';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route exact path='/dashboard' element={<Dashboard/>} />
         <Route exact path='/testpage' element={<TestPage/>} />
         <Route exact path='/mainfeed' element={<MainFeed/>} />
+        <Route exact path='/profile' element={<Profile/>} />
       </Routes>
     </Router>
   );

@@ -1,6 +1,5 @@
 import React from 'react';
 import hootsData from './db/hoots.json';
-import defaultProfile from '../../Images/logo-color-icon.png';
 
 function HootsFeed() {
   const hoots = hootsData.hoots;
@@ -34,6 +33,7 @@ function HootsFeed() {
           ))}
         </div>
       )}
+      {/* Yes Aayana, I put the CSS in here. I will worry about it later lol */}
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
 

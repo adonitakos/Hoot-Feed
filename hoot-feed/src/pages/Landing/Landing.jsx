@@ -4,7 +4,7 @@ import Navbar from '../../components/Navbar/Navbar';
 import "../Landing/Landing.css"
 import { Auth } from 'aws-amplify';
 
-//Signup Form
+// Signup Form
 
 function SignupForm() {
   const [displayName, setDisplayName] = useState('');
@@ -31,7 +31,7 @@ function SignupForm() {
       console.log('Signup error:', error);
       // Handle signup error
     }
-  };
+  }; // <--- handleSignup() async function ends here
 
   return (
     <form onSubmit={handleSignup} className="signup-form">
@@ -65,13 +65,12 @@ function SignupForm() {
       <button type="submit">JOIN HOOT FEED</button>
     </form>
   );
-}
 
+} // <--- SignupForm() function ends here
 
-//Landing
+// Landing
 function Landing() {
-
-
+  
   return (
     <>
       <Navbar></Navbar>
@@ -86,12 +85,10 @@ function Landing() {
         </div>
         <div className='landing-section'>
           <h2>Signup</h2>
-          {/*Signup vibes */}
+          {/* Signup vibes */}
           <SignupForm />
         </div>
       </div>
-     
-      <h1>Landing page</h1>
     </>
   )
 } // <--- Landing() function ends here

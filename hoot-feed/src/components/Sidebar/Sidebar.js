@@ -20,10 +20,9 @@ function Sidebar() {
         setUser(null);
         console.log('User fetch error:', error);
       }
-    };
-
+    }; // <--- fetchUser() async function ends here
     fetchUser();
-  }, []);
+  }, []); // <--- useEffect() ends here
 
   const handleLogout = async () => {
     try {
@@ -34,7 +33,7 @@ function Sidebar() {
       console.log('Logout error:', error);
       // Handle logout error
     }
-  };
+  }; // <--- handleLogout() async function ends here
 
   if (!user) {
     // Render loading state or redirect to login page
@@ -62,22 +61,20 @@ function Sidebar() {
         Hoot
       </button>
       <div className="blue-div">
-      
-      {showHootForm && (
-      <div className="hoot-form-container">
-        <HootForm />
+        {showHootForm && (
+          <div className="hoot-form-container">
+            <HootForm />
+          </div>
+        )}
       </div>
-    )}
-    </div>
-      
-
-    
 
       <button onClick={handleLogout} className="logout-button">
         Logout
       </button>
+
     </div>
   );
-}
+
+} // <--- Sidebar() function ends here
 
 export default Sidebar;

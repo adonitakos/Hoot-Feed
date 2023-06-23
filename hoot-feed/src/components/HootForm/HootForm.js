@@ -15,7 +15,7 @@ function HootForm() {
   const handlePictureInputChange = (e) => {
     const file = e.target.files[0];
     setPicture(file);
-  };
+  }; 
 
   const handleTextAreaChange = (e) => {
     const value = e.target.value;
@@ -56,6 +56,6 @@ function HootForm() {
       </div>
     </form>
   );
-}
+} // <--- HootForm() function ends here
 
 export default HootForm;

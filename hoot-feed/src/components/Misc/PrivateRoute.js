@@ -10,7 +10,7 @@ const PrivateRoute = ({ element: Component, ...rest }) => {
     } catch (error) {
       return false;
     }
-  };
+  }; // <--- isAuthenticated() function ends here
 
   return (
     <Route
@@ -18,6 +18,6 @@ const PrivateRoute = ({ element: Component, ...rest }) => {
       element={isAuthenticated() ? <Component /> : <Navigate to="/" replace />}
     />
   );
-};
+}; // <--- PrivateRoute() function ends here
 
 export default PrivateRoute;
