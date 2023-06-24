@@ -7,7 +7,7 @@
             "message": "My name is Antonios Francesco “Adoni” Takos, and this is a test of our version of a Tweet, we call a “Hoot”; on our Twitter clone platform, Hoot Feed. This is built with React.js, along with an AWS backend that is handled with AWS Cognito for authentication and AWS DynamoDB for our NoSQL database. ",
             "date": "Jun 21, 2023",
             "time": "4:30 PM",
-            "image": "https://sjuhellenic.com/static/media/Yiannaki_Awards_2023.b2f4cea817b77b95fc45.jpg"
+            "image": "https://raw.githubusercontent.com/adonitakos/Personal-Website/master/images/astoria_park.jpeg"
         },
         {
             "hootID":"265517831",

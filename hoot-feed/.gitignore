@@ -23,6 +23,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # ==== ADDED BY DEVELOPERS ====
+config/
 config.js
 PROJECT-NOTES.txt
 aws-exports.js

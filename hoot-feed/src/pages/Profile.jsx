@@ -34,7 +34,6 @@ function Profile() {
     }
   }; // <--- handleLogout() async function ends here
 
-
   return (
     <>
       <h1 style={{ textAlign: 'center', fontSize: '50px' }}>Profile</h1>

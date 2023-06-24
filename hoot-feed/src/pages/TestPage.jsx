@@ -3,7 +3,7 @@
 import React from 'react';
 import API_Testing from '../components/Testing/API_Testing';
 import HootsFeed from '../components/Testing/HootsFeed';
-
+import DB_Testing from '../components/Testing/DB_Testing';
 
 function TestPage() {
   return (
@@ -11,6 +11,8 @@ function TestPage() {
    <HootsFeed />
    <br /> <br /> <br />
    <API_Testing />
+   <br /> <br /> <br />
+   <DB_Testing />
   </>
   ) 
 } // <--- TestPage() function ends here

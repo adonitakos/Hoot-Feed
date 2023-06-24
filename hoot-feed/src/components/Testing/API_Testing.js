@@ -1,7 +1,7 @@
 // File: /src/Testing/API_Testing.js
 // THIS IS ONLY FOR TESTING!!!!!!
 import React, { useState, useEffect } from 'react';
-import { HUGGING_FACE_API_KEY } from '../../config';
+import { HUGGING_FACE_API_KEY } from '../../config/config-keys';
 import hootsData from './db/hoots.json'
 import interests from './db/interests.json';
 

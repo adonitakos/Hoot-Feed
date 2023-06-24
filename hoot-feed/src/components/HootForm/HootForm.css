@@ -60,3 +60,9 @@
     padding-bottom: 15px;
   }
   
+  .image-icon {
+    width: 10%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }

@@ -12,7 +12,11 @@ function MainFeed() {
     <div className='feed'>
         <h1>MainFeed page</h1>
         <br></br>
-        <Feed />
+        <div className='feed-container' style={{display:'grid', placeContent:'center'}}>
+
+          <Feed />
+        </div>
+        
     </div>
     </>
   )
