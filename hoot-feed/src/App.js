@@ -4,22 +4,24 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 // Pages:
 import Landing from './pages/Landing/Landing';
-import Dashboard from './pages/Dashboard';
+
 import TestPage from './pages/TestPage';
 import MainFeed from './pages/MainFeed';
-import Profile from './pages/Profile';
+import Profile from './pages/Profile/Profile';
 import PrivateRoute from './components/Misc/PrivateRoute';
 import InterestsPage from './pages/InterestsPage';
+import PasswordReset from './pages/PasswordReset';
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route exact path='/' element={<Landing/>} />
-        <Route exact path='/dashboard' element={<Dashboard/>} />
+       
         <Route exact path='/testpage' element={<TestPage/>} />
         <Route exact path='/mainfeed' element={<MainFeed/>} />
         <Route exact path='/profile' element={<Profile/>} />
+        <Route exact path='/reset' element={<PasswordReset/>} />
         <Route exact path="/interestspage" element={<InterestsPage/>} />
       </Routes>
     </Router>

@@ -1,6 +1,8 @@
 // File: /src/pages/Profile.jsx
 import React, { useEffect, useState } from 'react';
 import { Auth } from 'aws-amplify';
+import './Profile.css';
+import Navbar from '../../components/Navbar/Navbar';
 
 function Profile() {
   const [user, setUser] = useState(null);
@@ -32,48 +34,34 @@ function Profile() {
       console.log('Logout error:', error);
       // Handle logout error
     }
-  }; // <--- handleLogout() async function ends here
+  };
 
   return (
     <>
-      <h1 style={{ textAlign: 'center', fontSize: '50px' }}>Profile</h1>
+      <Navbar></Navbar>
+      <h1 className="profile-heading">Profile</h1>
       <div className="profile">
         <img src={user.picture} alt="Profile" className="profile-picture" />
-        <h3>{user.preferred_username}</h3>
-        <h4>{user.email}</h4>
+        <h3 className="username">{user.preferred_username}</h3>
+        <h4 className="email">{user.email}</h4>
+        <div className="link-container">
+          <a href="/edit-profile" className="profile-link">
+            Edit Profile Picture
+          </a>
+          <br />
+          <a href="/reset" className="profile-link">
+            Reset Password
+          </a>
+        </div>
       </div>
-      <br /> <br />
-      <div className='buttons-container'>
-        <button> <a href='/dashboard'> DASHBOARD </a> </button>
-        <br/>
-        <button onClick={handleLogout}> LOGOUT  </button>
+      <div className="buttons-container">
+        <button>
+          <a href="/mainfeed">Dashboard</a>
+        </button>
+        <button className="logout-button" onClick={handleLogout}>
+          Logout
+        </button>
       </div>
-
-    <style>{`
-        .buttons-container {
-            display: grid;
-            place-items: center;
-        }
-
-        button {
-            background-color: #3d56f0;
-            color: #ffffff;
-            padding: 10px 20px;
-            font-size: 16px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            display: grid;
-            place-items: center;
-        }
-
-        a {
-            text-decoration: none;
-            color: white;
-        }
-
-    `}</style>
-
     </>
   );
 }

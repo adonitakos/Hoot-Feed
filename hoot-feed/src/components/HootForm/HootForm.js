@@ -84,6 +84,12 @@ function HootForm() {
           <span>
           {/* <img src={imageIcon} alt="Select Image" className="image-icon" /> */}
           </span>
+            {/* Image preview */}
+            {attachment && (
+            <div className="image-preview">
+              <img src={attachment} alt="Selected Image" />
+            </div>
+          )}
 
           <div className="button-container">
             <button type="submit">Hoot!</button>

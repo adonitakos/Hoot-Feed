@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import Navbar from '../../components/Navbar/Navbar';
 import "../Landing/Landing.css"
 import { Auth } from 'aws-amplify';
+import TrendingWorld from '../../components/Trending/TrendingWorld';
+import NavbarNoLogo from '../../components/Navbar/Navbar_NoLogo';
 
 // Signup Form
 
@@ -68,6 +70,21 @@ function SignupForm() {
 
 } // <--- SignupForm() function ends here
 
+
+// Welcome component
+function Welcome() {
+  return (
+    <div className="welcome-section">
+      <h2></h2>
+      <p>Discover the latest buzz and trending topics with HootFeed.</p>
+      <p>Stay updated with real-time feeds and engage with the community.</p>
+      <p>Join the conversation, share your thoughts, and be a part of the HootFeed community.</p>
+    </div>
+  );
+}
+
+
+
 // Landing
 function Landing() {
   
@@ -76,12 +93,13 @@ function Landing() {
       <Navbar></Navbar>
       <div className='landing-wrapper'>
         <div className='landing-section'>
-          <h2>What's Happening Now</h2>
+          <h2>Welcome to HootFeed!</h2>
           {/*Top tweets will go here */}
+          <Welcome />
         </div>
         <div className='landing-section'>
           <h2>Trending</h2>
-          {/*Trending List will go here*/}
+          <TrendingWorld />
         </div>
         <div className='landing-section'>
           <h2>Signup</h2>

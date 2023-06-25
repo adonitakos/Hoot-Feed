@@ -67,7 +67,7 @@ h3 {
 
 .logout-button {
   margin-top: auto;
-  margin-bottom: 10px;
+  margin-bottom: 60px;
 }
 
 .logout-button:hover,
@@ -103,4 +103,8 @@ h3 {
   width: 100%;
   box-sizing: border-box;
   margin-top: 20px;
+}
+.Logo {
+  width: 200px; 
+  height: 100px; 
 }

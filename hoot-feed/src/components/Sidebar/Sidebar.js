@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Auth } from 'aws-amplify';
 import './Sidebar.css';
 import HootForm from '../HootForm/HootForm';
+import Logo from "../../Images/Logo_No_Slogan.png"
+
 
 function Sidebar() {
   const [user, setUser] = useState(null);
@@ -42,6 +44,7 @@ function Sidebar() {
 
   return (
     <div className="sidebar">
+      <img src={Logo} alt="Logo" className="Logo" />
       <div className="profile">
         <img src={user.picture} alt="Profile" className="profile-picture" />
         <h3>{user.preferred_username}</h3>
@@ -51,7 +54,7 @@ function Sidebar() {
           <a href="/profile">Profile</a>
         </li>
         <li>
-          <a href="/explore">Explore</a>
+          <a href="/interestform">Explore</a>
         </li>
       </ul>
       <button
