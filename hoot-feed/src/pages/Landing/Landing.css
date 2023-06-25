@@ -64,3 +64,17 @@
   .signup-form button:focus {
     outline: none;
   }
+
+  .welcome-section {
+    text-align: center;
+  }
+  
+  .welcome-section h2 {
+    font-size: 32px;
+  }
+  
+  .welcome-section p {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  

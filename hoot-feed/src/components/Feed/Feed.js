@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import { getDocs, collection } from 'firebase/firestore';
 import { firestore } from "../../config/config-keys";
+import Navbar from '../Navbar/Navbar';
+import NavbarNoLogo from '../Navbar/Navbar_NoLogo';
 import './Feed.css'
 
 function Feed() {
@@ -27,8 +29,10 @@ function Feed() {
 
   return (
     <>
+       
       {hootsData && (
         <div>
+          
           {hootsData.map((hoot, index) => (
             <li key={index} style={{ listStyleType: 'none' }}>
               <div className={hoot.attachment ? 'card with-image' : 'card'}>

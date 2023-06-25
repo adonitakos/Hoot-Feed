@@ -17,12 +17,12 @@ function Navbar() {
     try {
       await Auth.signIn(username, password);
       console.log("Successful Login");
-      window.location.href = '/dashboard'
+      window.location.href = '/mainfeed'
     } catch (error) {
       console.log('Login error:', error);
       // Handle login error
     }
-  }; // <--- handleLogin() async function ends here
+  };
 
   const handleClickOutside = (event) => {
     if (loginRef.current && !loginRef.current.contains(event.target)) {
@@ -37,10 +37,16 @@ function Navbar() {
     };
   }, []);
 
+  const handleLogoClick = () => {
+    window.location.href = '/';
+  };
+
   return (
     <div className="navbar">
       <div className="logo">
-        <img src={Logo} alt="Logo" className="logo-image" />
+        <a href="/" onClick={handleLogoClick}>
+          <img src={Logo} alt="Logo" className="logo-image" />
+        </a>
       </div>
       <div className="login">
         <button onClick={toggleLogin} className="login-button">Sign In</button>
@@ -58,13 +64,15 @@ function Navbar() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
+            <p className="forgot-password">
+              <a href="/reset">Forgot Password</a>
+            </p>
             <button onClick={handleLogin}>Login</button>
           </div>
-        )} 
+        )}
       </div>
     </div>
   );
-
-} // <--- Navbar() function ends here
+}
 
 export default Navbar;
