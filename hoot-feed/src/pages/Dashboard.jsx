@@ -5,9 +5,8 @@ function Dashboard() {
   return (
     <div className="dashboard">
       <Sidebar />
-      
     </div>
   )
-}
+} // <--- Dashboard() function ends here
 
 export default Dashboard;

@@ -9,7 +9,7 @@ import TestPage from './pages/TestPage';
 import MainFeed from './pages/MainFeed';
 import Profile from './pages/Profile';
 import PrivateRoute from './components/Misc/PrivateRoute';
-import DB_Testing from './components/Testing/DB_Testing';
+import InterestsPage from './pages/InterestsPage';
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
         <Route exact path='/testpage' element={<TestPage/>} />
         <Route exact path='/mainfeed' element={<MainFeed/>} />
         <Route exact path='/profile' element={<Profile/>} />
-        <Route exact path='/test' element={<DB_Testing/>}/> {/*delete */}
+        <Route exact path="/interestspage" element={<InterestsPage/>} />
       </Routes>
     </Router>
   );
