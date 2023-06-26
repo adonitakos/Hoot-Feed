@@ -5,7 +5,7 @@ import API_Testing from '../components/Testing/API_Testing';
 import HootsFeed from '../components/Testing/HootsFeed';
 import DB_Testing from '../components/Testing/DB_Testing';
 import InterestsForm from '../components/Interests/InterestsForm';
-import FireHugginTest from '../components/Testing/db/FireHugginTest';
+import FireHugginTest from '../components/Testing/FireHugginTest';
 
 function TestPage() {
   return (

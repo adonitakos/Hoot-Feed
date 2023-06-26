@@ -5,6 +5,20 @@ import imageIcon from '../../Images/Image.png';
 import { firestore } from "../../config/config-keys";
 import { getDocs, collection, addDoc } from 'firebase/firestore';
 import { Auth } from 'aws-amplify';
+import { HUGGING_FACE_API_KEY } from "../../config/config-keys";
+
+async function query(data) {
+  const response = await fetch(
+    'https://api-inference.huggingface.co/models/MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli',
+    {
+      headers: { Authorization: `Bearer ${HUGGING_FACE_API_KEY} ` },
+      method: 'POST',
+      body: JSON.stringify(data),
+    }
+  );
+  const result = await response.json();
+  return result;
+} 
 
 function HootForm() {
   
@@ -29,25 +43,40 @@ function HootForm() {
 
   // Handle submission of data
   const handleSubmit = async (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    try {
-      const docRef = await addDoc(collection(firestore, "hoots"), {
-        preferred_username: preferredUsername,
-        profile_pic: profilePic,
-        message: message,
-        attachment: attachment,
-        date: new Date()
-      });
-      console.log("Document written with ID: ", docRef.id);
-      // Clear form inputs
-      setPreferredUsername("");
-      setMessage("");
-      setAttachment("");
-    } catch (err) {
-      console.error("Error adding document: ", err);
-    }
-  }; // <--- handleSubmit() function ends here
+  try {
+    const response = await query({
+      inputs: message,
+      parameters: {
+        candidate_labels: ["Business & Economics", "Entertainment", "Food", "Music", "Science", "Sports", "Technology & Computing", "Travel"] // Replace with your classifiers
+      },
+    });
+
+    const { scores, labels } = response;
+
+    const scienceLabelIndex = labels.indexOf("Science");
+    const classification = scores[scienceLabelIndex] > 0 ? "Science" : "Unknown";
+
+    const docRef = await addDoc(collection(firestore, "hoots"), {
+      preferred_username: preferredUsername,
+      profile_pic: profilePic,
+      message: message,
+      attachment: attachment,
+      date: new Date(),
+      class: classification
+    });
+
+    console.log("Document written with ID: ", docRef.id);
+    setPreferredUsername("");
+    setMessage("");
+    setAttachment("");
+  } catch (err) {
+    console.error("Error adding document: ", err);
+  }
+};
+
+  
 
   // Literally just to handle resizing the textarea (for the message)
   const handleTextAreaChange = (e) => {

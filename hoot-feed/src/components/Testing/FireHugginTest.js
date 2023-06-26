@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { firestore } from '../../../config/config-keys';
+import { firestore } from '../../config/config-keys';
 import { getDocs, collection } from 'firebase/firestore';
-import { HUGGING_FACE_API_KEY } from '../../../config/config-keys';
+import { HUGGING_FACE_API_KEY } from '../../config/config-keys';
 
 async function query(data) {
   const response = await fetch(
-    'https://api-inference.huggingface.co/models/facebook/bart-large-mnli',
+    'https://api-inference.huggingface.co/models/MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli',
     {
       headers: { Authorization: `Bearer ${HUGGING_FACE_API_KEY} ` },
       method: 'POST',
@@ -14,7 +14,7 @@ async function query(data) {
   );
   const result = await response.json();
   return result;
-}
+} 
 
 function FireHugginTest() {
   const [responseData, setResponseData] = useState(null);
