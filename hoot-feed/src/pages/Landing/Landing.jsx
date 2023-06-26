@@ -13,6 +13,8 @@ function SignupForm() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [picture, setPicture] = useState('');
+  const [signupSuccess, setSignupSuccess] = useState(false);
+
 
   const handleSignup = async (e) => {
     e.preventDefault();
@@ -28,6 +30,11 @@ function SignupForm() {
         },
       });
       console.log('Signup successful:', signUpResponse);
+      setDisplayName('');
+      setEmail('');
+      setPassword('');
+      setPicture('');
+      setSignupSuccess(true);
       // Handle successful signup
     } catch (error) {
       console.log('Signup error:', error);
@@ -37,6 +44,7 @@ function SignupForm() {
 
   return (
     <form onSubmit={handleSignup} className="signup-form">
+      {signupSuccess && <p>Account successfully created!</p>}
       <input
         type="text"
         placeholder="Display Name"

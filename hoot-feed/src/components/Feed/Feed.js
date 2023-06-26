@@ -29,7 +29,6 @@ function Feed() {
 
   return (
     <>
-       
       {hootsData && (
         <div>
           

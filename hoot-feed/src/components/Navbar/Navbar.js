@@ -17,7 +17,7 @@ function Navbar() {
     try {
       await Auth.signIn(username, password);
       console.log("Successful Login");
-      window.location.href = '/mainfeed'
+      window.location.href = '/interestspage'
     } catch (error) {
       console.log('Login error:', error);
       // Handle login error

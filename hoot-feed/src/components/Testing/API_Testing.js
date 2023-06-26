@@ -6,7 +6,7 @@ import hootsData from './db/hoots.json'
 import interests from './db/interests.json';
 
 // Use fetch POST request asyncronously to gain access to bart-large-mnli model
-// and query a given data parameter(this being an input like a hoot)
+// and query a given data para meter(this being an input like a hoot)
 async function query(data) {
     const response = await fetch(
       'https://api-inference.huggingface.co/models/facebook/bart-large-mnli',
@@ -73,7 +73,7 @@ function API_Testing() {
           </ul>
         </div>
       )}
-      </>
+    </>
     );
 } // <--- API_Testing() function ends here
 

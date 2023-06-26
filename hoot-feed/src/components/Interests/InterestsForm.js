@@ -53,7 +53,7 @@ function InterestsForm() {
   // Handle submission of data to users collection
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     try {
       const docRef = await addDoc(collection(firestore, "users"), {
         email: email,
@@ -62,11 +62,12 @@ function InterestsForm() {
         interests: interests
       });
       console.log("Document written with ID: ", docRef.id);
+      window.location.href = '/mainfeed'; // Redirect after successful submission
     } catch (err) {
       console.error("Error adding document: ", err);
     }
-  }; // <--- handleSubmit() function ends here
-
+  }; // <--- handleSubmit() async function ends here
+  
   // Handle changes in checkbox selection
   const handleCheckboxChange = (event) => {
     const { value, checked } = event.target;

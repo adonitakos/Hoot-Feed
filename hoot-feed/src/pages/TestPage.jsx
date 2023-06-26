@@ -5,6 +5,7 @@ import API_Testing from '../components/Testing/API_Testing';
 import HootsFeed from '../components/Testing/HootsFeed';
 import DB_Testing from '../components/Testing/DB_Testing';
 import InterestsForm from '../components/Interests/InterestsForm';
+import FireHugginTest from '../components/Testing/db/FireHugginTest';
 
 function TestPage() {
   return (
@@ -14,12 +15,13 @@ function TestPage() {
     </h1>
     <hr />
 
-    {/* <HootsFeed />
-    <br /> <br /> <br />
-    <API_Testing />
-    <br /> <br /> <br />
-    <DB_Testing /> */}
-    {/* <InterestsForm/> */}
+     {/* <HootsFeed />    <br /> <br /> <br /> */}
+
+    <API_Testing /> 
+    <br /> <br /> <br /> <hr />
+    <DB_Testing /> 
+    <br /> <br /> <br /> <hr />
+    <FireHugginTest />
 
   </>
   );
