@@ -1,11 +1,12 @@
+// File: /src/components/PasswordReset/ForgotPassword.js
 import React, { useState } from 'react';
 import { CognitoUserPool, CognitoUser } from 'amazon-cognito-identity-js';
 import awsmobile from '../../aws-exports';
 import './PasswordResetForm.css'; 
 import Navbar from '../../components/Navbar/Navbar';
 
-
 const PasswordResetForm = () => {
+  // State variables:
   const [email, setEmail] = useState('');
   const [verificationCode, setVerificationCode] = useState('');
   const [newPassword, setNewPassword] = useState('');
@@ -17,6 +18,7 @@ const PasswordResetForm = () => {
     UserPoolId: userPoolId,
     ClientId: appClientId,
   };
+
   const userPool = new CognitoUserPool(poolData);
 
   const handlePasswordReset = (e) => {
@@ -38,7 +40,9 @@ const PasswordResetForm = () => {
 
   return (
     <div className="password-reset-container">
+
       <h1>Reset Password</h1>
+
       <div className="password-reset-form-container">
         <form className="password-reset-form" onSubmit={handlePasswordReset}>
           <label htmlFor="email">Email:</label>
@@ -48,7 +52,9 @@ const PasswordResetForm = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-          /><br />
+          />
+
+          <br />
 
           <label htmlFor="verificationCode">Verification Code:</label>
           <input
@@ -57,7 +63,9 @@ const PasswordResetForm = () => {
             value={verificationCode}
             onChange={(e) => setVerificationCode(e.target.value)}
             required
-          /><br />
+          />
+          
+          <br />
 
           <label htmlFor="newPassword">New Password:</label>
           <input
@@ -66,16 +74,22 @@ const PasswordResetForm = () => {
             value={newPassword}
             onChange={(e) => setNewPassword(e.target.value)}
             required
-          /><br />
+          />
+          
+          <br />
 
           <button type="submit">Reset Password</button>
 
           {resetStatus === 'success' && <p>Password reset successful!</p>}
           {resetStatus === 'error' && <p>Password reset failed. Please try again.</p>}
+      
         </form>
+      {/* "password-reset-form-container" div ends here */}
       </div>
-    </div>
+    {/* "password-reset-container" div ends here */}
+    </div> 
   );
-};
+
+}; // <--- PasswordResetForm() function ends here
 
 export default PasswordResetForm;

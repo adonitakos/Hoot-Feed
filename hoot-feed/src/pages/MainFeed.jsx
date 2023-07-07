@@ -6,23 +6,20 @@ import Navbar from '../components/Navbar/Navbar';
 
 function MainFeed() {
   return (
-    <>
+  <>
     <div className='sidebar'>
         <Sidebar />
     </div>
-    <div className='feed'>
 
+    <div className='feed'>
         <h1>MainFeed page</h1>
         <br></br>
-        <div className='feed-container' style={{display:'grid', placeContent:'center'}}>
-       
+        <div className='feed-container' style={{display:'grid', placeContent:'center', zoom:'110%'}}>
           <Feed />
         </div>
-        
     </div>
-    </>
-  )
+  </>
+  );
 } // <--- MainFeed() function ends here
-
 
 export default MainFeed;

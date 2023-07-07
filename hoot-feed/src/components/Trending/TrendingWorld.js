@@ -1,3 +1,4 @@
+// File: /src/components/Trending/TrendingWorld.js
 import React from 'react';
 import Trendlist from './Trendlist.txt';
 import './TrendingWorld.css'; 

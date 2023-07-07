@@ -1,17 +1,17 @@
+/* File: /src/components/Trending/TrendingWorld.css */
 .numbered-list {
     list-style-type: decimal;
     padding-left: 20px;
   }
   
-  .numbered-list li {
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .numbered-list li:hover {
-    background-color: #e6e6e6;
-  }
-  
+.numbered-list li {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.numbered-list li:hover {
+  background-color: #e6e6e6;
+}

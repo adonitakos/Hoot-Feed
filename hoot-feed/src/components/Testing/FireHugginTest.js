@@ -14,7 +14,7 @@ async function query(data) {
   );
   const result = await response.json();
   return result;
-} 
+} // <--- query() async function ends here
 
 function FireHugginTest() {
   const [responseData, setResponseData] = useState(null);

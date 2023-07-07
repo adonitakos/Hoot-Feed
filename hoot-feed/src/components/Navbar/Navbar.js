@@ -4,6 +4,7 @@ import "../Navbar/Navbar.css"
 import { Auth } from 'aws-amplify';
 
 function Navbar() {
+  // State Variables
   const [isLoginOpen, setLoginOpen] = useState(false);
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -50,6 +51,7 @@ function Navbar() {
       </div>
       <div className="login">
         <button onClick={toggleLogin} className="login-button">Sign In</button>
+
         {isLoginOpen && (
           <div ref={loginRef} className="dropdown-login">
             <input
@@ -69,10 +71,13 @@ function Navbar() {
             </p>
             <button onClick={handleLogin}>Login</button>
           </div>
-        )}
+        )} 
+      {/* "login" div ends here */}
       </div>
+    {/* "navbar" div ends here */}
     </div>
   );
-}
+
+} // <--- Navbar() function ends here
 
 export default Navbar;

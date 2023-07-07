@@ -1,3 +1,4 @@
+// File: /src/components/Welcome.js
 import React from 'react';
 
 class Welcome extends React.Component {
@@ -10,7 +11,8 @@ class Welcome extends React.Component {
         <p>Join the conversation, share your thoughts, and be a part of the HootFeed community.</p>
       </div>
     );
-  }
-}
+  } // <--- render() function ends here
+
+} // <--- Welcome{} class ends here
 
 export default Welcome;

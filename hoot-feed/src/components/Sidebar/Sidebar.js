@@ -1,3 +1,4 @@
+// File: /src/components/Sidebar/Sidebar.js
 import React, { useEffect, useState } from 'react';
 import { Auth } from 'aws-amplify';
 import './Sidebar.css';
