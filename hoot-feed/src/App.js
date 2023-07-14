@@ -11,6 +11,7 @@ import Profile from './pages/Profile/Profile';
 import PrivateRoute from './components/Misc/PrivateRoute';
 import InterestsPage from './pages/InterestsPage';
 import PasswordReset from './pages/PasswordReset';
+import DBTest from './components/Testing/DB-test';
 
 function App() {
   return (
@@ -23,6 +24,11 @@ function App() {
         <Route exact path='/profile' element={<Profile/>} />
         <Route exact path='/reset' element={<PasswordReset/>} />
         <Route exact path="/interestspage" element={<InterestsPage/>} />
+
+
+        <Route exact path="/test" element={<DBTest/>} />
+
+
       </Routes>
     </Router>
   );
